@@ -1,0 +1,13 @@
+.brand {
+  position: relative;
+  &-list {
+    margin: 48px 60px 51px;
+    width: calc(100% - 120px);
+  }
+  &-item {
+    @include flex-center;
+    min-height: 48px;
+    margin-right: 20px;
+    width: calc(100% / 6 - 16.66px);
+  }
+}

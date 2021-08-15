@@ -1,0 +1,70 @@
+.s-hidden {
+  visibility: hidden;
+  padding-right: 89px;
+}
+.select-custom {
+  color: $light-text;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+}
+.select {
+  width: 100%;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  padding-top: 1.5px;
+  padding-bottom: 1.5px;
+}
+.styledSelect {
+  position: absolute;
+  top: 1px;
+  right: 0;
+  bottom: 0;
+  left: -1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 17px 0 19px;
+  border-left: 1px solid $border-color;
+}
+.styledSelect:after {
+  content: "\f110";
+  font-family: molla;
+  font-style: normal;
+  font-weight: 400;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.options {
+  display: none;
+  position: absolute;
+  top: calc(100% + 15px);
+  width: 100%;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  margin: 0 0;
+  padding: 0 0;
+  list-style: none;
+  background-color: white;
+  -webkit-box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.2);
+}
+.options li {
+  padding: 0 6px;
+  margin: 0 0;
+  padding: 5px 20px;
+}
+.options li:hover {
+  background-color: #ccc;
+  color: #000;
+}

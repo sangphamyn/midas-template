@@ -1,0 +1,4 @@
+@use 'sass:math';
+@function lineH($leading, $fontSize) {
+  @return round(($leading / 2 + $fontSize) * 10000 / $fontSize) / 10000;
+}

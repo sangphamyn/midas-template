@@ -1,0 +1,64 @@
+// > Intro slider
+.intro {
+  &-slide {
+    position: relative;
+  }
+  &-content {
+    position: absolute;
+    top: 50%;
+    left: 130px;
+    transform: translateY(-50%);
+  }
+  &-subtitle {
+    font-size: 18px;
+    color: $light-text;
+    font-weight: 300;
+    margin-bottom: 18px;
+    letter-spacing: -0.45px;
+  }
+  &-title {
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #fff;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+  }
+  &-text {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 44px;
+    letter-spacing: -0.6px;
+    margin-left: 3px;
+  }
+  &-img img {
+    display: block;
+  }
+  &-btn {
+    color: $dark-text;
+    background: $primary-color;
+    padding: 2px 39px 2px 29px;
+    border-radius: 3px;
+    display: inline-block;
+    line-height: lineH(48, 14);
+    margin-left: 4px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    transition: all 0.2s;
+    i {
+      margin-left: 3px;
+      font-size: 16px;
+    }
+    &:hover {
+      border: 1px solid $primary-color;
+      color: $primary-color;
+      background: #333;
+    }
+  }
+}
+.hero {
+  padding-left: 11px;
+}
+// Intro slider <

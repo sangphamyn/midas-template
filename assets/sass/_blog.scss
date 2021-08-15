@@ -1,0 +1,39 @@
+.blog {
+  margin-top: 2px;
+}
+.post {
+  &-body {
+    padding: 14px 20px;
+  }
+  &-meta {
+    color: #ccc;
+    margin-bottom: 3px;
+    letter-spacing: -0.3px;
+  }
+  &-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: -0.2px;
+    a {
+      color: $dark-text;
+      transition: color 0.2s;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+  &-content {
+    line-height: lineH(24, 14);
+    font-weight: 300;
+  }
+}
+.read-more {
+  margin-top: 4px;
+  display: inline-block;
+  color: $primary-color;
+}
+.post-list .flickity-page-dots {
+  bottom: -27px;
+  left: 109px;
+}

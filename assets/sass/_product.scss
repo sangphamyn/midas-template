@@ -1,0 +1,247 @@
+.product {
+  text-align: center;
+  width: calc(20% - 20px);
+  margin: 25px 10px;
+  background: #fff;
+  transition: box-shadow 0.2s;
+  &-media {
+    padding: 20px 20px 15px;
+    position: relative;
+  }
+  &-body {
+    padding: 0 20px 37px;
+    a {
+      transition: color 0.2s;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+  &-cat {
+    text-transform: uppercase;
+    font-size: 13px;
+    margin-bottom: 12px;
+    a {
+      color: #ccc;
+    }
+  }
+  &-title {
+    line-height: 1.4;
+    margin-bottom: 2px;
+    a {
+      color: $body-text;
+    }
+  }
+  &-price {
+    margin-bottom: 13px;
+    color: $primary-color;
+    letter-spacing: -0.3px;
+  }
+  &-ratings {
+    display: flex;
+    justify-content: center;
+    color: #ccc;
+  }
+  &-color-list {
+    display: flex;
+    justify-content: center;
+    margin-top: 18px;
+  }
+  &-color {
+    margin-left: 10px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    cursor: pointer;
+    &:first-child {
+      margin-left: 3px;
+    }
+    &-active {
+      box-shadow: 0 0 0 2px #fff, 0 0 0 3px #ccc;
+    }
+  }
+  &-action {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  &-countdown {
+    position: absolute;
+    bottom: 18px;
+    margin: auto;
+    background-color: #fcb941;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    border-radius: 2px;
+    width: fit-content;
+    padding: 0 12px;
+    transition: all 0.3s;
+  }
+  &:hover {
+    box-shadow: 0 5px 20px rgba(#000, 0.05);
+    .addToCart {
+      @include show;
+    }
+    .btn-product-icon {
+      transform: scale(1);
+      @include show;
+    }
+    .product-countdown {
+      transform: translateY(123%);
+    }
+  }
+}
+.ratings {
+  position: relative;
+  font-size: 12px;
+  &-val {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    color: $primary-color;
+  }
+  &-text {
+    margin-left: 8px;
+    color: #ccc;
+    font-size: 13px;
+    letter-spacing: -0.3px;
+  }
+}
+.label {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 13px;
+  min-width: 45px;
+  letter-spacing: -0.13px;
+  padding: 5.5px 10px;
+  border-radius: 2px;
+  color: #fff;
+  &-sale {
+    background: #ef837b;
+  }
+  &-top {
+    background: #7dd2ea;
+  }
+  &-new {
+    background: #a6c76c;
+  }
+  & + .label {
+    top: 50px;
+  }
+}
+.time-item {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  padding: 7px 12px;
+  font-size: 10px;
+  line-height: 1;
+  span:first-child {
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+    &::after {
+      content: ":";
+      position: absolute;
+      top: 0;
+      right: -20px;
+    }
+  }
+  &:last-child span:first-child::after {
+    display: none;
+  }
+}
+.addToCart {
+  position: absolute;
+  background: $primary-color;
+  color: #fff;
+  bottom: 12px;
+  text-transform: uppercase;
+  padding: 10.5px 10px;
+  transition: all 0.3s;
+  left: 20px;
+  right: 20px;
+  opacity: 0;
+  visibility: hidden;
+  i {
+    font-size: 16px;
+    margin-right: 5px;
+  }
+  &:hover {
+    background: #333;
+    color: $primary-color;
+  }
+}
+.btn-product-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid $primary-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: $primary-color;
+  margin-bottom: 10px;
+  transition: all 0.2s;
+  transform: scale(0);
+  @include hide;
+  background: #fff;
+  &:hover {
+    background: $primary-color;
+    color: #fff;
+  }
+  span {
+    width: max-content;
+    right: 100%;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+  }
+}
+.btn-wishlist {
+  &:hover::after {
+    content: "\f233";
+  }
+  &::after {
+    content: "\f234";
+    font-family: "molla";
+  }
+}
+.new-price {
+  color: #ef837b;
+  margin-right: 8px;
+}
+.old-price {
+  color: #ccc;
+}
+.products {
+  margin-bottom: 2px;
+}
+.product-sm {
+  display: flex;
+  align-items: center;
+  margin-top: 17px;
+  &-body {
+    margin-left: 20px;
+  }
+  &-name {
+    color: $body-text;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-bottom: 2px;
+    display: inline-block;
+    letter-spacing: -0.2px;
+    transition: 0.25s;
+  }
+  &-price {
+    color: $primary-color;
+    margin-bottom: 5px;
+    letter-spacing: -0.6px;
+  }
+}

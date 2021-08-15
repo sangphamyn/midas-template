@@ -2,11 +2,105 @@ html {
   font-size: 62.5%;
 }
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: $primary-font;
   font-size: 1.4rem;
-  // width: 1920px;
-  // margin: auto;
+  width: 1920px;
+  margin: auto;
 }
 a:hover {
   color: $primary-color;
+}
+::-moz-selection {
+  color: #fff;
+  background-color: $primary-color;
+}
+::selection {
+  color: #fff;
+  background-color: $primary-color;
+}
+::placeholder {
+  color: #ccc;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  color: #ccc;
+}
+::-ms-input-placeholder {
+  color: #ccc;
+}
+.container,
+.container-fluid {
+  width: 1800px;
+  max-width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.section-heading {
+  border-bottom: 1px solid $border-color;
+  margin-bottom: 21px;
+  a {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+    color: #333;
+    position: relative;
+    display: inline-block;
+    padding: 15px 0;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      height: 1px;
+      background: $primary-color;
+      width: 100%;
+    }
+  }
+}
+.title {
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: -0.5px;
+}
+.bg-pink {
+  background-color: #f3815f;
+}
+.bg-black {
+  background-color: #333;
+}
+.bg-aqua {
+  background-color: #7dd2ea;
+}
+.bg-brown {
+  background-color: #b58555;
+}
+.bg-dark-brown {
+  background-color: #825a45;
+}
+.bg-grey {
+  background-color: #93a6b0;
+}
+.bg-light-grey {
+  background-color: #f1f1f1;
+}
+.bg-light-grey1 {
+  background-color: #eaeaec;
+}
+.bg-light-grey2 {
+  background-color: #e2e2e2;
+}
+.bg-light-grey3 {
+  background-color: #dddad5;
+}
+.bg-dark-grey {
+  background-color: $light-text;
+}
+.bg-pink1 {
+  background-color: #cc9999;
+}
+.bg-dark-red {
+  background-color: #c00b1b;
+}
+.bg-light-pink {
+  background-color: #edd2c8;
 }

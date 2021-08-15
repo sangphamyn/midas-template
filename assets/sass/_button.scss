@@ -1,0 +1,65 @@
+.previous-br,
+.next-br,
+.previous-td,
+.next-td {
+  font-size: 20px;
+  @include center(y);
+  font-size: 30px;
+  cursor: pointer;
+  color: #ccc;
+  transition: 0.2s;
+  &:hover {
+    color: $primary-color;
+  }
+}
+.previous-br {
+  left: 14px;
+}
+.next-br {
+  right: 11px;
+}
+.btn-disable {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.previous-td {
+  left: -27px;
+  transform: translateY(-100%);
+}
+.next-td {
+  right: -29px;
+  transform: translateY(-100%);
+}
+.next-bn,
+.previous-bn {
+  position: absolute;
+  top: 25px;
+  bottom: 25px;
+  width: 30px;
+  background: rgba(#fff, 0.75);
+  @include flex-center;
+  color: #666;
+  font-size: 20px;
+  cursor: pointer;
+  &::before {
+    content: "";
+    width: 10px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+  }
+}
+.previous-bn {
+  left: 0;
+  &::before {
+    background-image: url(../imgs/nav-prev-shadow.png);
+    left: 100%;
+  }
+}
+.next-bn {
+  right: 0;
+  &::before {
+    background-image: url(../imgs/nav-next-shadow.png);
+    right: 100%;
+  }
+}
