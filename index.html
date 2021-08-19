@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Midas Sang</title>
     <link rel="stylesheet" href="lib/boostrap/css/bootstrap.css">
-    <link rel="stylesheet" href="lib/boostrap/css/bootstrap-grid.css">
     <link rel="stylesheet" href="lib/flickity/flickity.css">
     <link rel="stylesheet" href="assets/css/app.css">
     <!-- Google font -->
@@ -20,7 +19,7 @@
     <!-- Header -->
     <header class="header">
         <div class="header-top">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="header-left d-flex">
                     <div class="lc">
                         <a href="#0" class="lc-current">USD <i class="fkt-angle-down"></i></a>
@@ -60,15 +59,18 @@
             </div>
         </div>
         <div class="header-middle">
-            <div class="container-fluid">
+            <div class="container-fluid py-lg-0 py-4">
                 <div class="row align-items-center">
-                    <div class="col-2">
+                    <div class="col-3 col-xxl-2 d-flex align-items-center">
+                        <div class="menu-icon d-lg-none">
+                            <i class="fkt-bars"></i>
+                        </div>
                         <a href="index.html" class="logo">
                             <img src="assets/imgs/Icons/logo.png" alt="">
                             midas
                         </a>
                     </div>
-                    <div class="col-8">
+                    <div class="d-none d-lg-block col-6 col-xxl-8">
                         <div class="header-search">
                             <form action="#" method="GET">
                                 <div class="header-search-wrapper">
@@ -91,19 +93,69 @@
                             </form>
                         </div>
                     </div>
-                    <div class="col-2 d-flex justify-content-end">
+                    <div class="col-9 col-lg-3 col-xxl-2 d-flex justify-content-end">
                         <div class="header-control">
-                            <a href="#0">
+                            <a href="#0" class="compare-icon header-control-item">
                                 <i class="fkt-random"></i>
                             </a>
-                            <a href="#0">
+                            <a href="#0" class="wishlist-icon header-control-item">
                                 <i class="fkt-heart-o"></i>
                                 <span class="wishlist-count">3</span>
                             </a>
-                            <a href="#0">
+                            <div class="cart-icon header-control-item">
                                 <i class="fkt-shopping-cart"></i>
                                 <span class="cart-count">2</span>
-                            </a>
+                                <div class="mini-cart">
+                                    <div class="mini-cart-products">
+                                        <div class="cart-product">
+                                            <div class="cart-product-details">
+                                                <h4 class="cart-product-title">
+                                                    <a href="#0">Beige knitted elastic runner shoes</a>
+                                                </h4>
+                                                <div class="cart-product-info">
+                                                    <span class="cart-product-qty">1</span>
+                                                    x $84.00
+                                                </div>
+                                            </div>
+                                            <div class="cart-product-image">
+                                                <a href="#0">
+                                                    <img src="assets/imgs/product/product-12.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <a href="#0" class="btn-remove" title="Remove this product">
+                                                <i class="fkt-close"></i>
+                                            </a>
+                                        </div>
+                                        <div class="cart-product">
+                                            <div class="cart-product-details">
+                                                <h4 class="cart-product-title">
+                                                    <a href="#0">Beige knitted elastic runner shoes</a>
+                                                </h4>
+                                                <div class="cart-product-info">
+                                                    <span class="cart-product-qty">1</span>
+                                                    x $84.00
+                                                </div>
+                                            </div>
+                                            <div class="cart-product-image">
+                                                <a href="#0">
+                                                    <img src="assets/imgs/product/product-7.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <a href="#0" class="btn-remove" title="Remove this product">
+                                                <i class="fkt-close"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="cart-total">
+                                        <span>TOTAL</span>
+                                        <span class="cart-total-price">$160.00</span>
+                                    </div>
+                                    <div class="cart-action">
+                                        <a href="#0" class="view-cart">View Cart</a>
+                                        <a href="#0" class="cart-checkout">Checkout <i class="fkt-long-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -112,7 +164,7 @@
         <div class="header-bottom">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-2">
+                    <div class="col-3 col-xxl-2">
                         <div class="category-dropdown">
                             <div class="category-toggle">
                                 <i class="fkt-bars"></i>
@@ -208,7 +260,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-auto">
+                    <div class="col-9 col-xxl-10">
                         <nav>
                             <ul class="main-menu">
                                 <li>
@@ -253,21 +305,22 @@
                 </div>
             </div>
         </div>
+        <div></div>
     </header>
     <!-- End header -->
     <main class="main">
-        <div class="container-fluid py-2">
-            <div class="row justify-content-end my-4">
-                <div class="col-8 hero">
+        <div class="container-fluid pt-lg-2 pb-4 pb-lg-0">
+            <div class="row justify-content-end my-lg-4 top-section">
+                <div class="col-12 col-lg-9 col-xxl-8 hero">
                     <div class="intro-slider">
                         <div class="intro-slide">
                             <div class="intro-img">
                                 <img src="assets/imgs/hero-1.jpg" alt="">
                             </div>
                             <div class="intro-content">
-                                <h3 class="intro-subtitle">New Arrivals</h3>
+                                <h3 class="intro-subtitle d-md-block d-none">New Arrivals</h3>
                                 <h1 class="intro-title">The new way <br>to buy furniture</h1>
-                                <p class="intro-text">Spring Collections 2019</p>
+                                <p class="intro-text d-md-block d-none">Spring Collections 2019</p>
                                 <a href="#0" class="intro-btn">Discover now <i class="fkt-long-arrow-right"></i></a>
                             </div>
                         </div>
@@ -276,9 +329,9 @@
                                 <img src="assets/imgs/hero-2.jpg" alt="">
                             </div>
                             <div class="intro-content">
-                                <h3 class="intro-subtitle">New Arrivals</h3>
+                                <h3 class="intro-subtitle d-md-block d-none">New Arrivals</h3>
                                 <h1 class="intro-title text-dark">The new way <br>to buy furniture</h1>
-                                <p class="intro-text text-dark">Spring Collections 2019</p>
+                                <p class="intro-text text-dark d-md-block d-none">Spring Collections 2019</p>
                                 <a href="#0" class="intro-btn">Discover now <i class="fkt-long-arrow-right"></i></a>
                             </div>
                         </div>
@@ -287,29 +340,27 @@
                                 <img src="assets/imgs/hero-3.jpg" alt="">
                             </div>
                             <div class="intro-content">
-                                <h3 class="intro-subtitle">New Arrivals</h3>
+                                <h3 class="intro-subtitle d-md-block d-none">New Arrivals</h3>
                                 <h1 class="intro-title text-dark">The new way <br>to buy furniture</h1>
-                                <p class="intro-text text-dark">Spring Collections 2019</p>
+                                <p class="intro-text text-dark d-md-block d-none">Spring Collections 2019</p>
                                 <a href="#0" class="intro-btn">Discover now <i class="fkt-long-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-2">
-                    <div class="sub-banner">
-                        <a href="#0">
-                            <img src="assets/imgs/banners/banner-1.jpg" alt="" class="d-block">
-                        </a>
-                        <a href="#0" class="banner-link">Discover now</a>
-                    </div>
+                <div class="col-2 sub-banner">
+                    <a href="#0">
+                        <img src="assets/imgs/banners/banner-1.jpg" alt="" class="d-block">
+                    </a>
+                    <a href="#0" class="banner-link">Discover now</a>
                 </div>
             </div>
         </div>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-2 left-section">
+                <div class="col-xl-3 col-xxl-2 left-section">
                     <div class="row">
-                        <div class="col-12 mb-2">
+                        <div class="col-12 col-sm-6 col-xl-12 mb-2">
                             <div class="banner">
                                 <a href="#0">
                                     <img src="assets/imgs/banners/banner-11.jpg" alt="">
@@ -328,7 +379,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 bestSeller">
+                        <div class="col-12 col-sm-6 col-xl-12 bestSeller">
                             <div class="section-heading">
                                 <a href="#0">
                                     Bestsellers
@@ -400,7 +451,7 @@
                                 </a>
                             </div>
                             <div class="row">
-                                <div class="col-12 special-offer">
+                                <div class="col-6 col-xl-12 special-offer">
                                     <div class="product text-center">
                                         <div class="product-media">
                                             <a href="#0">
@@ -460,6 +511,9 @@
                                         </div>
                                         <div class="product-countdown"></div>
                                     </div>
+                                </div>
+                                <div class="col-6 col-xl-12 special-offer">
+                                    
                                     <div class="product text-center">
                                         <div class="product-media">
                                             <a href="#0">
@@ -519,7 +573,7 @@
                             </div>
                         </div>
                         <!-- end special offer -->
-                        <div class="col-12 mb-2">
+                        <div class="col-12 col-sm-6 col-xl-12 mb-5 mb-xl-2">
                             <div class="banner">
                                 <a href="#0">
                                     <img src="assets/imgs/banners/banner-12.jpg" alt="">
@@ -535,7 +589,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 blog">
+                        <div class="col-12 col-sm-6 col-xl-12 mb-5 blog">
                             <div class="section-heading mb-5">
                                 <a href="#0">
                                     Latest Blog Posts
@@ -598,7 +652,7 @@
                     </div>
                 </div>
                 <!-- end left section -->
-                <div class="col-10 right-section">
+                <div class="col-xl-9 col-xxl-10 right-section">
                     <div class="promotion d-flex">
                         <div class="banner">
                             <a href="#0">
@@ -688,21 +742,21 @@
                                 <h2 class="title">Trending Today</h2>
                             </div>
                             <div class="heading-right">
-                                <ul class="trending-nav d-flex">
+                                <ul class="trending-nav d-flex justify-content-center flex-wrap">
                                     <li class="trending-nav-item">
-                                        <a href="#0" class="nav-active">All</a>
+                                        <a href="#0" class="nav-active d-md-inline">All</a>
                                     </li>
                                     <li class="trending-nav-item">
-                                        <a href="#0">Electronics</a>
+                                        <a href="#0" class="d-md-inline">Electronics</a>
                                     </li>
                                     <li class="trending-nav-item">
-                                        <a href="#0">Furniture</a>
+                                        <a href="#0" class="d-md-inline">Furniture</a>
                                     </li>
                                     <li class="trending-nav-item">
-                                        <a href="#0">Clothes</a>
+                                        <a href="#0" class="d-md-inline">Clothes</a>
                                     </li>
                                     <li class="trending-nav-item">
-                                        <a href="#0">Accessories</a>
+                                        <a href="#0" class="d-md-inline">Accessories</a>
                                     </li>
                                 </ul>
                             </div>
@@ -1042,9 +1096,9 @@
                         </div>
                     </div>
                     <div class="cat-banner-wrapper row electronic">
-                        <div class="col-4">
+                        <div class="col-12 col-lg-3 col-xxl-4 mb-3 mb-lg-0">
                             <div class="cat-banner row">
-                                <div class="col-6 pe-0">
+                                <div class="col-6 pe-0 d-block d-lg-none d-xxl-block">
                                     <div class="cat-banner-list">
                                         <div class="banner-list-content">
                                             <h2>
@@ -1076,7 +1130,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-6 ps-0">
+                                <div class="col-6 col-lg-12 col-xxl-6 ps-0 ps-lg-3 ps-xxl-0">
                                     <div class="banner">
                                         <a href="#0">
                                             <img src="assets/imgs/banners/banner-5.jpg" alt="">
@@ -1097,7 +1151,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-8">
+                        <div class="col-12 col-lg-9 col-xxl-8">
                             <div class="position-relative">
                                 <div class="electronic-wrapper">
                                     <div class="product">
@@ -1377,9 +1431,9 @@
                         </div>
                     </div>
                     <div class="cat-banner-wrapper row furniture">
-                        <div class="col-4">
+                        <div class="col-12 col-lg-3 col-xxl-4 mb-3 mb-lg-0">
                             <div class="cat-banner row">
-                                <div class="col-6 pe-0">
+                                <div class="col-6 pe-0 d-block d-lg-none d-xxl-block">
                                     <div class="cat-banner-list">
                                         <div class="banner-list-content">
                                             <h2>
@@ -1411,7 +1465,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-6 ps-0">
+                                <div class="col-6 col-lg-12 col-xxl-6 ps-0 ps-lg-3 ps-xxl-0">
                                     <div class="banner">
                                         <a href="#0">
                                             <img src="assets/imgs/banners/banner-6.jpg" alt="">
@@ -1432,7 +1486,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-8">
+                        <div class="col-12 col-lg-9 col-xxl-8">
                             <div class="position-relative">
                                 <div class="furniture-wrapper">
                                     <div class="product">
@@ -1665,8 +1719,8 @@
                         </div>
                     </div>
                     <!-- Main banner -->
-                    <div class="row">
-                        <div class="col-6">
+                    <div class="row main-banner">
+                        <div class="col-12 col-lg-6">
                             <div class="banner">
                                 <a href="#0">
                                     <img src="assets/imgs/banners/banner-7.jpg" alt="">
@@ -1685,7 +1739,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-12 col-lg-6">
                             <div class="banner">
                                 <a href="#0">
                                     <img src="assets/imgs/banners/banner-8.jpg" alt="">
@@ -1708,9 +1762,9 @@
                     <!-- end main banner -->
                     <!-- clothing -->
                     <div class="cat-banner-wrapper row clothing">
-                        <div class="col-4">
+                        <div class="col-12 col-lg-3 col-xxl-4 mb-3 mb-lg-0">
                             <div class="cat-banner row">
-                                <div class="col-6 pe-0">
+                                <div class="col-6 pe-0 d-block d-lg-none d-xxl-block">
                                     <div class="cat-banner-list">
                                         <div class="banner-list-content">
                                             <h2>
@@ -1742,7 +1796,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-6 ps-0">
+                                <div class="col-6 col-lg-12 col-xxl-6 ps-0 ps-lg-3 ps-xxl-0">
                                     <div class="banner">
                                         <a href="#0">
                                             <img src="assets/imgs/banners/banner-9.jpg" alt="">
@@ -1763,7 +1817,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-8">
+                        <div class="col-12 col-lg-9 col-xxl-8">
                             <div class="position-relative">
                                 <div class="clothing-wrapper">
                                     <div class="product">
@@ -1988,9 +2042,9 @@
                     <!-- end clothing -->
                     <!-- cooking -->
                     <div class="cat-banner-wrapper row cooking">
-                        <div class="col-4">
+                        <div class="col-12 col-lg-3 col-xxl-4 mb-3 mb-lg-0">
                             <div class="cat-banner row">
-                                <div class="col-6 pe-0">
+                                <div class="col-6 pe-0 d-block d-lg-none d-xxl-block">
                                     <div class="cat-banner-list">
                                         <div class="banner-list-content">
                                             <h2>
@@ -2022,7 +2076,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-6 ps-0">
+                                <div class="col-6 col-lg-12 col-xxl-6 ps-0 ps-lg-3 ps-xxl-0">
                                     <div class="banner">
                                         <a href="#0">
                                             <img src="assets/imgs/banners/banner-10.jpg" alt="">
@@ -2043,7 +2097,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-8">
+                        <div class="col-12 col-lg-9 col-xxl-8">
                             <div class="position-relative">
                                 <div class="cooking-wrapper">
                                     <div class="product">
@@ -2271,7 +2325,7 @@
                     <!-- icon box -->
                     <div class="icon-boxes-container container-fluid">
                         <div class="row">
-                            <div class="col-3">
+                            <div class="col-12 col-sm-6 col-lg-3">
                                 <div class="icon-box">
                                     <span class="icon-box-icon">
                                         <i class="fkt-rocket"></i>
@@ -2282,7 +2336,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-3">
+                            <div class="col-12 col-sm-6 col-lg-3">
                                 <div class="icon-box">
                                     <span class="icon-box-icon">
                                         <i class="fkt-rotate-left"></i>
@@ -2293,7 +2347,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-3">
+                            <div class="col-12 col-sm-6 col-lg-3">
                                 <div class="icon-box">
                                     <span class="icon-box-icon">
                                         <i class="fkt-info-circle"></i>
@@ -2304,7 +2358,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-3">
+                            <div class="col-12 col-sm-6 col-lg-3">
                                 <div class="icon-box">
                                     <span class="icon-box-icon">
                                         <i class="fkt-life-ring"></i>
@@ -2327,13 +2381,13 @@
         <div class="cta">
             <div class="container-fluid">
                 <div class="row justify-content-center">
-                    <div class="col-8">
+                    <div class="col-12 col-xl-8">
                         <div class="row align-items-center">
-                            <div class="col-5 cta-txt">
+                            <div class="col-12 col-md-5 cta-txt ms-md-0 ms-0 ms-sm-3 mb-md-0 mb-3">
                                 <h3 class="cta-title">Join Our Newsletter</h3>
                                 <p class="cta-desc">Subcribe to get information about products and coupons</p>
                             </div>
-                            <div class="col-7">
+                            <div class="col-12 col-md-7">
                                 <form action="#">
                                     <input type="email" class="cta-input" placeholder="Enter your Email Address" required>
                                     <button type="submit" class="cta-btn">Subscribe</button>
@@ -2347,7 +2401,7 @@
         <div class="footer-middle">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-12 col-lg-6 col-xl-4">
                         <div class="widget widget-about">
                             <a href="index.html" class="logo">
                                 <img src="assets/imgs/Icons/logo.png" alt="">
@@ -2356,11 +2410,11 @@
                             <p>Praesent dapibus, neque id cursus ucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volupat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
                             <div class="widget-about-info">
                                 <div class="row">
-                                    <div class="col-4">
+                                    <div class="col-12 col-sm-5 col-md-4 mb-3 mb-md-0">
                                         <span class="widget-about-title">Got Question? Call us 24/7</span>
                                         <a href="tel: +0123 456 789">+0123 456 789</a>
                                     </div>
-                                    <div class="col-8">
+                                    <div class="col-12 col-sm-7 col-md-8">
                                         <span class="widget-about-title">Payment Method</span>
                                         <img src="assets/imgs/carts.png" alt="">
                                     </div>
@@ -2368,7 +2422,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-2">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-5 mb-md-0">
                         <h4 class="widget-title">Useful Links</h4>
                         <ul class="widget-list">
                             <li>
@@ -2388,7 +2442,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-2">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-5 mb-md-0">
                         <h4 class="widget-title">Customer Service</h4>
                         <ul class="widget-list">
                             <li>
@@ -2411,7 +2465,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-2">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-6 col-xl-2 mb-5 mb-md-0">
                         <h4 class="widget-title">My Account</h4>
                         <ul class="widget-list">
                             <li>
@@ -2431,7 +2485,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-2">
+                    <div class="col-12 col-sm-6 col-xl-2 mb-5 mb-md-0">
                         <div class="widget-newsletter">
                             <h4 class="widget-title">Sign Up to Newsletter</h4>
                             <p>Aliquam erat volutpat. Nam dui mi tincidunt quis accumsan</p>
@@ -2445,9 +2499,9 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <div class="container-fluid d-flex footer-wrap">
+            <div class="container-fluid d-flex footer-wrap flex-column flex-md-row align-items-center">
                 <p class="footer-copyright">Copyright © 2019 Molla Store. All Rights Reserved.</p>
-                <div class="social-icons ms-auto">
+                <div class="social-icons ms-md-auto">
                     <span class="social-label">Social Media</span>
                     <a href="#0" class="social-icon social-facebook">
                         <i class="fkt-facebook-f"></i>
@@ -2469,6 +2523,9 @@
         </div>
     </footer>
     <!--end footer -->
+    <div class="backTop">
+        <i class="fkt-angle-up"></i>
+    </div>
 </body>
 <!-- Plugins JS File -->
 <script src="lib/jquery/jquery-3.6.0.js"></script>

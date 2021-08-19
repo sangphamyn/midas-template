@@ -37,6 +37,21 @@ $(document).ready(function() {
         }
     });
 
+    // Equal height cells
+    Flickity.prototype._createResizeClass = function() {
+        this.element.classList.add('flickity-resize');
+    };
+    
+    Flickity.createMethods.push('_createResizeClass');
+    
+    var resize = Flickity.prototype.resize;
+    Flickity.prototype.resize = function() {
+        this.element.classList.remove('flickity-resize');
+        resize.call( this );
+        this.element.classList.add('flickity-resize');
+    };
+
+
     //Trending
     var trending = $('.trending-products-list').flickity({
         prevNextButtons: false,
@@ -179,5 +194,73 @@ $(document).ready(function() {
         } else {
             prev_btn.fadeIn();
         }
-    } 
+    }
+
+    //
+    $(window).resize(function(){
+        electronic.flickity('destroy');
+        electronic = $('.electronic-wrapper').flickity({
+            prevNextButtons: false,
+            pageDots: false,
+            contain: false,
+            groupCells: true,
+            cellAlign: 'right',
+            draggable: true
+        })
+        electronic_data = electronic.data('flickity');
+        furniture.flickity('destroy');
+        furniture = $('.furniture-wrapper').flickity({
+            prevNextButtons: false,
+            pageDots: false,
+            contain: false,
+            groupCells: true,
+            cellAlign: 'right',
+            draggable: true
+        })
+        furniture_data = furniture.data('flickity');
+        clothing.flickity('destroy');
+        clothing = $('.clothing-wrapper').flickity({
+            prevNextButtons: false,
+            pageDots: false,
+            contain: false,
+            groupCells: true,
+            cellAlign: 'right',
+            draggable: true
+        })
+        clothing_data = clothing.data('flickity');
+        cooking.flickity('destroy');
+        cooking = $('.cooking-wrapper').flickity({
+            prevNextButtons: false,
+            pageDots: false,
+            contain: false,
+            groupCells: true,
+            cellAlign: 'right',
+            draggable: true
+        })
+        cooking_data = cooking.data('flickity');
+        if(electronic_data.slides.length == 1) {
+            next_ebn.hide();
+            prev_ebn.hide();
+        } else {
+            next_ebn.show();
+        }
+        if(furniture_data.slides.length == 1) {
+            next_fbn.hide();
+            prev_fbn.hide();
+        } else {
+            next_fbn.show();
+        }
+        if(clothing_data.slides.length == 1) {
+            next_cbn.hide();
+            prev_cbn.hide();
+        } else {
+            next_cbn.show();
+        }
+        if(cooking_data.slides.length == 1) {
+            next_kbn.hide();
+            prev_kbn.hide();
+        } else {
+            next_kbn.show();
+        }
+    })
 })///

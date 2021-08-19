@@ -4,8 +4,11 @@ html {
 body {
   font-family: $primary-font;
   font-size: 1.4rem;
-  width: 1920px;
-  margin: auto;
+  // width: 1920px;
+  // margin: auto;
+}
+a {
+  color: unset;
 }
 a:hover {
   color: $primary-color;
@@ -27,13 +30,6 @@ a:hover {
 }
 ::-ms-input-placeholder {
   color: #ccc;
-}
-.container,
-.container-fluid {
-  width: 1800px;
-  max-width: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 .section-heading {
   border-bottom: 1px solid $border-color;
@@ -103,4 +99,13 @@ a:hover {
 }
 .bg-light-pink {
   background-color: #edd2c8;
+}
+// .row {
+//   margin: 0;
+// }
+.container-fluid {
+  width: 1800px;
+  max-width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }

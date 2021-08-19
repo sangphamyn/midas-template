@@ -3,7 +3,7 @@
     font-size: 13px;
     text-transform: uppercase;
     font-weight: 300;
-    .container {
+    .container-fluid {
       display: flex;
       justify-content: space-between;
       position: relative;
@@ -26,7 +26,6 @@
     }
   }
   &-right {
-    margin-right: -14px;
     display: flex;
     align-items: center;
     a {
@@ -43,6 +42,9 @@
       }
       &:nth-child(2) {
         padding: 5px 16px;
+      }
+      &:last-child {
+        padding-right: 0;
       }
     }
   }
@@ -68,13 +70,16 @@
   &-control {
     display: flex;
     margin-bottom: 7px;
-    a {
+    &-item {
+      color: $dark-text;
       margin-left: 17px;
       display: flex;
       align-items: center;
-      transition: color 0.25s;
+      transition: color 0.2s;
+      cursor: pointer;
       i {
         font-size: 26px;
+        transition: color 0.2s;
       }
       &:last-child i {
         font-size: 32px;
@@ -82,6 +87,9 @@
       }
       &:first-child {
         margin-right: 9px;
+      }
+      &:hover > i {
+        color: $primary-color;
       }
     }
   }
@@ -106,6 +114,7 @@
     position: absolute;
     top: 100%;
     @include center(x);
+    z-index: 1;
     box-shadow: 0 0 5px 0 rgba(#000, 0.1);
     @include hide;
     transition: all 0.2s;
@@ -177,6 +186,8 @@
     font-weight: 600;
     padding: 10px 12px;
     letter-spacing: -0.1px;
+    min-width: max-content;
+    width: 100%;
     i {
       font-size: 20px;
       margin-right: 16px;
@@ -185,6 +196,7 @@
   }
   &-menu {
     position: absolute;
+    z-index: 1;
     left: 0;
     right: 0;
     background: #fff;
@@ -267,5 +279,113 @@
     &:hover {
       color: $primary-color;
     }
+  }
+}
+.menu-icon {
+  font-size: 26px;
+  cursor: pointer;
+  transition: color 0.2s;
+  &:hover {
+    color: $primary-color;
+  }
+}
+.header-sticky {
+  position: relative;
+  z-index: 10;
+  height: 0;
+  transition: height 0.25s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+.header-height {
+  height: 53px;
+  // overflow: visible;
+}
+.header-sticky + div {
+  height: 53.8px;
+}
+.cart-icon {
+  position: relative;
+}
+.cart-icon:hover .mini-cart {
+  @include show;
+}
+.mini-cart {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background: #fff;
+  z-index: 2;
+  box-shadow: 0 0 5px 1px rgba(#000, 0.2);
+  padding: 20px 30px;
+  @include hide;
+  transition: 0.2s;
+  width: 300px;
+}
+.cart-product {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid $border-color;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  &-image img {
+    width: 60px;
+    border: 1px solid $border-color;
+  }
+  &-title {
+    color: $dark-text;
+    margin-bottom: 5px;
+    a {
+      transition: color 0.2s;
+    }
+  }
+}
+.btn-remove i {
+  font-size: 16px !important;
+  margin-left: 10px;
+  color: $light-text;
+  transition: color 0.2s;
+  &:hover {
+    color: $primary-color;
+  }
+}
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+.cart-action {
+  display: flex;
+  justify-content: space-between;
+}
+.view-cart {
+  background: $primary-color;
+  color: #fff;
+  padding: 7.5px 15px;
+  border: 1px solid $primary-color;
+  transition: all 0.25s;
+  &:hover {
+    color: #fff;
+    background: #e9a72e;
+  }
+}
+.cart-checkout {
+  background: #fff;
+  color: $primary-color;
+  border: 1px solid $primary-color;
+  padding: 7.5px 15px;
+  display: flex;
+  align-items: center;
+  transition: all 0.25s;
+  &:hover {
+    color: #fff;
+    background: $primary-color;
+  }
+  i {
+    font-size: 16px !important;
+    margin-left: 5px;
   }
 }

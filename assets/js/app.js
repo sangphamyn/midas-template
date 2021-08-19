@@ -2,6 +2,7 @@ $(document).ready(function(){
     // Category toggle
     $('.category-toggle').click(function(){
         $('.category-menu').slideToggle(200);
+        $('.header-bottom').addClass('overflow-visible');
     })
 
     // Countdown
@@ -24,6 +25,35 @@ $(document).ready(function(){
                 <span>secs</span>
             </div>`));
       });
+
+      // Sticky header
+      var header = $('.header-bottom');
+      var header_pos = header[0].offsetTop + $('.category-menu').height();
+      var lastScrollTop = 0;
+      var backTop = $('.backTop');
+      $(window).scroll(function(event) {
+          var st = $(this).scrollTop();
+          if(st >= header_pos) {
+              backTop.addClass('show-backTop');
+              header.removeClass('overflow-visible');
+              $('.category-menu').hide();
+              header.addClass('header-sticky');
+              if(st < lastScrollTop) {
+                  header.addClass('header-height');
+              } else {
+                  header.removeClass('header-height');
+              }
+          } else {
+              $('.category-menu').show();
+              header.removeClass('header-sticky');
+              header.removeClass('header-height');
+              backTop.removeClass('show-backTop');
+          }
+          lastScrollTop = st;
+      })
+      backTop.click(function() {
+          $(window).scrollTop(0);
+      })
 
     // Make select option
     $('select').each(function () {

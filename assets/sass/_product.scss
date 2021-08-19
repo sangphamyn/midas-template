@@ -8,6 +8,9 @@
     padding: 20px 20px 15px;
     position: relative;
   }
+  img {
+    width: 100%;
+  }
   &-body {
     padding: 0 20px 37px;
     a {
@@ -38,9 +41,11 @@
     letter-spacing: -0.3px;
   }
   &-ratings {
+    width: max-content;
     display: flex;
     justify-content: center;
     color: #ccc;
+    margin: auto;
   }
   &-color-list {
     display: flex;
@@ -66,8 +71,9 @@
     right: 20px;
   }
   &-countdown {
-    position: absolute;
+    @include center(x);
     bottom: 18px;
+    left: 50%;
     margin: auto;
     background-color: #fcb941;
     display: flex;
@@ -89,7 +95,7 @@
       @include show;
     }
     .product-countdown {
-      transform: translateY(123%);
+      transform: translate(-50%, 123%);
     }
   }
 }
@@ -158,6 +164,7 @@
 }
 .addToCart {
   position: absolute;
+  z-index: 1;
   background: $primary-color;
   color: #fff;
   bottom: 12px;
@@ -189,19 +196,35 @@
   color: $primary-color;
   margin-bottom: 10px;
   transition: all 0.2s;
-  transform: scale(0);
-  @include hide;
+  transform: scale(1);
+  @include show;
   background: #fff;
   &:hover {
     background: $primary-color;
     color: #fff;
+    span {
+      @include show;
+      transform: translateX(-15px);
+    }
   }
   span {
+    transition: all 0.2s;
     width: max-content;
-    right: 100%;
-    opacity: 0;
-    visibility: hidden;
+    right: 0;
+    top: -1px;
+    bottom: -1px;
+    @include hide;
     position: absolute;
+    z-index: -1;
+    font-size: 10px;
+    background: $primary-color;
+    color: #fff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 30px 0 0 30px;
   }
 }
 .btn-wishlist {

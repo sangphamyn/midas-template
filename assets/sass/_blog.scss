@@ -2,6 +2,7 @@
   margin-top: 2px;
 }
 .post {
+  width: 100%;
   &-body {
     padding: 14px 20px;
   }
@@ -26,6 +27,9 @@
   &-content {
     line-height: lineH(24, 14);
     font-weight: 300;
+  }
+  img {
+    width: 100%;
   }
 }
 .read-more {

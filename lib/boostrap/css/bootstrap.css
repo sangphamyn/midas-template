@@ -667,7 +667,7 @@ progress {
   }
 }
 .row {
-  --bs-gutter-x: 1.5rem;
+  --bs-gutter-x: 2rem;
   --bs-gutter-y: 0;
   display: flex;
   flex-wrap: wrap;
@@ -1788,7 +1788,7 @@ progress {
     --bs-gutter-y: 3rem;
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: 1600px) {
   .col-xxl-auto {
     flex: 0 0 auto;
     width: auto;
@@ -10456,7 +10456,7 @@ fieldset:disabled .btn {
     text-align: center !important;
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: 1600px) {
   .float-xxl-start {
     float: left !important;
   }

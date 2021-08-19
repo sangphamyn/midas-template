@@ -11,6 +11,22 @@
 @import "blog";
 @import "button";
 @import "brand";
+
+.backTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #fff;
+  box-shadow: 0 0 5px 1px rgba(#000, 0.2);
+  @include size(40px);
+  @include flex-center;
+  cursor: pointer;
+  @include hide;
+  transition: 0.3s;
+}
+.show-backTop {
+  @include show;
+}
 // > Best seller
 .bestSeller {
   margin-bottom: 11px;
@@ -47,10 +63,11 @@
     }
     &-countdown {
       position: static;
+      transform: none;
     }
     &:hover {
       .product-countdown {
-        transform: translateY(0);
+        transform: none;
       }
     }
   }
@@ -77,6 +94,7 @@
     &-item {
       margin-left: 10px;
       a {
+        display: block;
         color: $body-text;
         padding: 4.5px 10px 15px;
         transition: color 0.25s;
@@ -142,7 +160,7 @@
 }
 .cat-banner-wrapper {
   .product {
-    min-height: 400px;
+    min-height: calc(100% - 50px);
     width: calc(25% - 20px);
     &-media {
       padding: 17px 0 25px;
@@ -164,6 +182,7 @@
   }
   .cat-banner-list {
     background-repeat: no-repeat;
+    background-size: 100%;
   }
 }
 .cooking {
@@ -290,3 +309,4 @@
 // Icon box <
 
 @import "footer";
+@import "responsive";

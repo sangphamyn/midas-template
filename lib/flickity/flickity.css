@@ -118,7 +118,7 @@ https://flickity.metafizzy.co
   position: absolute;
   width: max-content;
   left: 128px;
-  bottom: 63px;
+  bottom: 12.5%;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -139,6 +139,10 @@ https://flickity.metafizzy.co
   border: 1px solid #d7d7d7;
   border-radius: 30px;
   cursor: pointer;
+  transition: all 0.2s;
+}
+.flickity-page-dots .dot:hover {
+  background: #d7d7d7;
 }
 
 .flickity-page-dots .dot.is-selected {

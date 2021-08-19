@@ -1,12 +1,259 @@
-@media screen and (min-width: 1700px) {
+@media screen and (min-width: 1600px) {
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1599px) {
+  .product {
+    width: calc(25% - 20px);
+  }
+  .cat-banner-wrapper {
+    .product {
+      width: calc(100% / 3 - 20px);
+    }
+  }
+  .brand-item {
+    width: 20%;
+    margin-right: 0;
+  }
+  .sub-banner {
+    display: none;
+  }
+  .promotion .banner:last-child {
+    display: none;
+  }
+  .promotion .banner:nth-child(2) {
+    margin-right: 0;
+  }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1399px) {
+  .product {
+    width: calc(100% / 3 - 20px);
+  }
+  .intro {
+    &-content {
+      left: 70px;
+    }
+    &-title {
+      font-size: 28px;
+    }
+    &-text {
+      margin-bottom: 30px;
+    }
+    &-btn {
+      padding: 2px 20px;
+      line-height: 2.2;
+    }
+  }
+  .flickity-page-dots {
+    left: 70px;
+  }
+  .brand-item {
+    width: 25%;
+  }
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1199px) {
+  .product {
+    width: calc(25% - 20px);
+  }
+  .left-section {
+    max-width: 720px;
+    margin: auto;
+    order: 1;
+  }
+  .post-list .flickity-page-dots {
+    bottom: -10px;
+  }
+  .section-heading a {
+    padding-top: 0;
+  }
+  .s-hidden {
+    padding-right: 35px;
+  }
+  .flickity-page-dots {
+    bottom: 20px;
+  }
+  .cta-btn {
+    min-width: 110px;
+  }
+  .trending .product-countdown {
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+    transform: none !important;
+    width: auto;
+  }
+  .trending .time-item {
+    padding: 7px 0;
+    span:first-child {
+      &::after {
+        right: -10px;
+      }
+    }
+  }
+  .addToCart {
+    bottom: 0;
+  }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
+  .header-bottom {
+    display: none;
+  }
+  .header-control {
+    margin-bottom: 0;
+  }
+  .heading {
+    flex-direction: column;
+    &-left {
+      margin-bottom: 20px;
+    }
+  }
+  .cat-banner {
+    max-width: 480px;
+    margin: auto;
+  }
+  .icon-box-content {
+    width: 200px;
+  }
+  .product {
+    width: calc(100% / 3 - 20px);
+  }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 767px) {
+  .product {
+    width: calc(50% - 20px);
+  }
+  .cat-banner-wrapper {
+    .product {
+      width: calc(50% - 20px);
+    }
+  }
+  .promotion {
+    flex-wrap: wrap;
+  }
+  .promotion .banner {
+    width: 100%;
+    margin-right: 0;
+  }
+  .brand-item {
+    width: calc(100% / 3);
+  }
+  .intro {
+    &-content {
+      left: 30px;
+    }
+    &-btn {
+      padding: 0 5px;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      width: fit-content;
+    }
+  }
+}
+@media screen and (max-width: 650px) {
+  .header-top {
+    display: none;
+  }
+  .cta-txt {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 575px) {
+  .footer-copyright {
+    text-align: center;
+  }
+  .cta-txt {
+    margin-left: 0;
+  }
+  .cta form {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .cta-input {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .post-list .flickity-page-dots {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (max-width: 520px) {
+  .product {
+    width: calc(100% - 20px);
+  }
+  .brand-item {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 475px) {
+  .special-offer {
+    width: 75%;
+    margin: auto;
+  }
+  .cat-banner-wrapper {
+    .product {
+      width: calc(100% - 20px);
+    }
+  }
+  .cat-banner {
+    flex-wrap: wrap;
+    & > div {
+      width: 100%;
+      padding: 0 10px !important;
+    }
+    &-list {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+  .brand-item {
+    width: 100%;
+  }
+  .promotion {
+    .banner-subtitle {
+      display: none;
+    }
+  }
+  .main-banner {
+    .banner-subtitle {
+      display: none;
+    }
+    .banner {
+      height: 150px;
+      a {
+        display: block;
+        height: 100%;
+      }
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+      &:first-child {
+        margin-bottom: 10px;
+      }
+    }
+    .banner-content {
+      left: 25px;
+    }
+    .banner-link {
+      width: fit-content;
+    }
+  }
+  .compare-icon,
+  .wishlist-icon {
+    display: none !important;
+  }
+  .intro-slider {
+    height: 250px;
+    .flickity-viewport {
+      height: 100% !important;
+    }
+  }
+  .intro-slide {
+    height: 100%;
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 }
