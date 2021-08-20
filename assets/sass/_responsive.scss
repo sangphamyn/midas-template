@@ -91,6 +91,19 @@
   .addToCart {
     bottom: 0;
   }
+  .main-menu > li:nth-child(2) {
+    position: static;
+  }
+  .main-menu > li:nth-child(3) {
+    position: static;
+  }
+  .menu-vertical .megamenu {
+    min-width: 740px;
+  }
+  .megamenu-page {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 @media screen and (max-width: 991px) {
   .header-bottom {
@@ -114,6 +127,9 @@
   }
   .product {
     width: calc(100% / 3 - 20px);
+  }
+  .header-sticky + div {
+    height: 0;
   }
 }
 @media screen and (max-width: 767px) {
