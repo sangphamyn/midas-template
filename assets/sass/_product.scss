@@ -12,7 +12,7 @@
     width: 100%;
   }
   &-body {
-    padding: 0 20px 37px;
+    padding: 0 20px 36px;
     a {
       transition: color 0.2s;
       &:hover {
@@ -196,7 +196,7 @@
   color: $primary-color;
   margin-bottom: 10px;
   transition: all 0.2s;
-  transform: scale(1);
+  transform: scale(0);
   @include show;
   background: #fff;
   &:hover {

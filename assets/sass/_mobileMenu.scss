@@ -5,9 +5,9 @@
   left: 0;
   right: 0;
   background: rgba(#000, 0.7);
-  @include hide;
   transition: 0.1s;
   z-index: 10;
+  @include hide;
 }
 .show-overlay {
   @include show;
@@ -27,8 +27,6 @@
   border: 1px solid $primary-color;
   margin: 20px;
   display: flex;
-  .search-input {
-  }
   .btn {
     background: $primary-color;
     border: none;
